@@ -78,11 +78,11 @@ h2 {
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    max-width: 12rem;
+    max-height: 12rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
@@ -172,144 +172,204 @@ a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
-.header__second--portfolio {
-    margin-bottom: 50px;
+.animation-delay-2s {
+  animation-delay: 2s;
 }
-.masonry-grid {
-    margin: 0 auto;
+
+.animation-delay-4s {
+  animation-delay: 4s;
 }
-.portfolio__item {
-    position: relative;
-    width: 99%;
-    height: 20%;
-    margin-left: 0.5%;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    &:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
-    @include respond-to(big-mobile) {
-        max-height: 250px;
-    }
-    @include respond-to(tablet) {
-        width: 49%;
-        margin-left: 0;
-        max-height: none;
-    }
-    @include desktop {
-        width: 32.6%;
-    }
-}
-.portfolio__item--width2 {
-    position: relative;
-    width: 99%;
-    margin-left: 0.5%;
-    max-height: 185px;
-    overflow-y: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    &:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
-    @include respond-to(big-mobile) {
-        max-height: 280px;
-    }
-    @include respond-to(tablet) {
-        width: 49%;
-        margin-left: 0;
-        max-height: none;
-    }
-    @include desktop {
-        width: 32.6%;
-    }
-}
-.portfolio__item--blur {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(3px);
-    transition: .5s filter linear;
-    -webkit-transition: .5s -webkit-filter linear;
-    -moz-transition: .5s -moz-filter linear;
-    -ms-transition: .5s -ms-filter linear;
-    -o-transition: .5s -o-filter linear;
-}
-.portfolio__overlay {
-    display: none;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.37);
-}
+
 .overlay__name--portfolio {
-    position: absolute;
-    height: 30px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    font-size: 26px;
-    text-transform: capitalize;
+  position: absolute;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 26px;
+  text-transform: capitalize;
 }
-.overlay__link {
-    position: absolute;
-    display: inline-block;
-    bottom: 10px;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: color .5s;
-}
+
 .overlay__link--code {
-    left: 10px;
-    &:hover {
-        color: red;
-    }
+  left: 10px;
 }
+
+.overlay__link--code:hover {
+  color: red;
+}
+
 .overlay__link--view {
-    left: 60px;
-    &:hover {
-        color: blue;
-    }
+  left: 60px;
 }
+
+.overlay__link--view:hover {
+  color: blue;
+}
+
+.masonry-grid {
+  margin: 0 auto;
+}
+
+.portfolio__item {
+  position: relative;
+  width: 25%;
+  height: 20%;
+  margin-left: 0.5%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.portfolio__item:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@media (min-width: 576px) {
+  .portfolio__item {
+    max-height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio__item {
+    width: 49%;
+    margin-left: 0;
+    max-height: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolio__item {
+    width: 32.6%;
+  }
+}
+
+.portfolio__item--width2 {
+  position: relative;
+}
+
+.portfolio__item--blur {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(3px);
+  transition: .5s filter linear;
+  -webkit-transition: .5s -webkit-filter linear;
+  -moz-transition: .5s -moz-filter linear;
+  -ms-transition: .5s -ms-filter linear;
+  -o-transition: .5s -o-filter linear;
+}
+
+.portfolio__overlay {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
+.overlay__name--portfolio {
+  position: absolute;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 26px;
+  text-transform: capitalize;
+}
+
+.overlay__link {
+  position: absolute;
+  display: inline-block;
+  bottom: 25px;
+  cursor: pointer;
+  transition: color .5s;
+}
+
+.overlay__link--code {
+  left: 10px;
+}
+
+.overlay__link--code:hover {
+  color: red;
+}
+
+.overlay__link--view {
+  left: 80px;
+}
+
+.overlay__link--view:hover {
+  color: blue;
+}
+
 .icon--big {
-    font-size:14px;
+  font-size: 14px;
 }
 
 .tooltip-up::after,
 .tooltip-right::after {
-    width: 140px;
-    background: rgba(29, 29, 29, 0.8);
-    color: #FFF;
-    content: attr(data-tooltip);
-    border-radius: 5px;
-    opacity: 0;
-    font-size: 12px;
-    padding: 3px 7px;
-    position: absolute;
-    visibility: hidden;
-    transition: all 0.4s ease-in-out; 
+  width: 140px;
+  background: rgba(29, 29, 29, 0.8);
+  color: #FFF;
+  content: attr(data-tooltip);
+  border-radius: 5px;
+  opacity: 0;
+  font-size: 12px;
+  padding: 3px 7px;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
 }
+
 .tooltip-up:hover::after,
 .tooltip-right:hover::after {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
+
 .tooltip-up::after {
-    bottom: 42px;
-    left: 0;
+  bottom: 42px;
+  left: 0;
 }
+
 .tooltip-right::after {
-    bottom: 10px;
-    left: 40px;
+  bottom: 10px;
+  left: 40px;
 }
 
 .delay-02s {
-    animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.delay-04s {
+  animation-delay: .4s;
+}
+
+.delay-05s {
+  animation-delay: .5s;
+}
+
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.icon--rotate-reverse {
+  animation: rotate-reverse 2s infinite linear;
+}
+
+.list-inline-item:hover {
+  animation: rotate-reverse 0.5s 1 linear;
 }
