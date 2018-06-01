@@ -45,6 +45,7 @@ h2 {
 
 .list-social-icons a:hover {
   color: #BD5D38;
+  animation: rotate-reverse 0.5s 1 linear;
 }
 
 .list-social-icons a .fa-lg {
@@ -368,8 +369,4 @@ a:hover, a:focus, a:active {
 
 .icon--rotate-reverse {
   animation: rotate-reverse 2s infinite linear;
-}
-
-.list-inline-item:hover {
-  animation: rotate-reverse 0.5s 1 linear;
 }

@@ -45,6 +45,7 @@ h2 {
     color: $gray-700;
     &:hover {
       color: $primary;
+      animation: rotate-reverse 0.5s 1 linear;
     }
     .fa-lg {
       font-size: 1.75rem;
