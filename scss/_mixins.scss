@@ -1,6 +1,6 @@
 // Mixins
 // Bootstrap Button Variant
-@import "_variables";
+
 @mixin background-cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,6 +15,7 @@
 }
 
 // Media-queries mixin. Mobile first method
+
 @mixin respond-to($media) {
     @if $media == mobile {
         @media (max-width: $big-mobile - 1) { @content; }
@@ -31,32 +32,8 @@
 }
 
 //
-@mixin desktop {
-    @include respond-to(desktop) {
-        @content
-            }
-    .old-ie & {
-        @content
-            }
-}
 
-// Media-queries mixin. Mobile first method
-@mixin respond-to($media) {
-    @if $media == mobile {
-        @media (max-width: $big-mobile - 1) { @content; }
-    }
-    @else if $media == big-mobile {
-        @media (min-width: $big-mobile) { @content; }
-    }
-    @else if $media == tablet {
-        @media (min-width: $tablet) { @content; }
-    }
-    @else if $media == desktop {
-        @media (min-width: $desktop) { @content; }
-    }
-}
 
-//
 @mixin desktop {
     @include respond-to(desktop) {
         @content

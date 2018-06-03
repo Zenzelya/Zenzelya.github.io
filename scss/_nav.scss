@@ -27,8 +27,8 @@
       margin: auto auto 0;
       padding: 0.1rem;
       .img-profile {
-        max-width: 12rem;
-        max-height: 12rem;
+        max-width: 10rem;
+        max-height: 10rem;
         border: 0.5rem solid fade-out($white, 0.8);
       }
     }
@@ -42,7 +42,7 @@
       .navbar-nav {
         flex-direction: column;
 
-        width: 100%;
+        width: $sidebar-base-width;
         .nav-item {
           display: block;
           .nav-link {

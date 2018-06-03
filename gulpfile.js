@@ -6,6 +6,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -88,6 +89,19 @@ gulp.task('css:compile', function() {
     .pipe(gulp.dest('./css'))
 });
 
+// autoprefix CSS
+gulp.task('css:autoprefix', function() {
+  return gulp.src([
+      './css/*.css',
+      '!./css/*.min.css'
+    ])
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./css'))
+});
+
 // Minify CSS
 gulp.task('css:minify', ['css:compile'], function() {
   return gulp.src([
@@ -103,7 +117,7 @@ gulp.task('css:minify', ['css:compile'], function() {
 });
 
 // CSS
-gulp.task('css', ['css:compile', 'css:minify']);
+gulp.task('css', ['css:compile', 'css:autoprefix', 'css:minify']);
 
 // Minify JavaScript
 gulp.task('js:minify', function() {

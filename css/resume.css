@@ -1,6 +1,5 @@
 body {
   font-family: 'Open Sans', serif;
-  padding-top: 54px;
   color: #868e96;
 }
 
@@ -82,8 +81,8 @@ h2 {
     padding: 0.1rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 12rem;
-    max-height: 12rem;
+    max-width: 10rem;
+    max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
@@ -95,7 +94,7 @@ h2 {
   }
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
-    width: 100%;
+    width: 17rem;
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
@@ -147,32 +146,6 @@ a:hover, a:focus, a:active {
   color: #824027;
 }
 
-.carousel-inner--fix-size {
-  overflow: hidden;
-  max-height: 400px !important;
-}
-
-.download-cv {
-  display: block;
-  width: 150px;
-  height: 40px;
-  margin-top: 40px;
-  padding-left: 20px;
-  border-width: 0;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  background-color: #2ecc71;
-  color: #fff;
-  line-height: 40px;
-  transition: background-color .3s;
-}
-
-.download-cv:hover {
-  background-color: #19b159;
-  color: #fff;
-  text-decoration: none;
-}
-
 .animation-delay-2s {
   animation-delay: 2s;
 }
@@ -208,10 +181,6 @@ a:hover, a:focus, a:active {
 
 .overlay__link--view:hover {
   color: blue;
-}
-
-.masonry-grid {
-  margin: 0 auto;
 }
 
 .portfolio__item {
