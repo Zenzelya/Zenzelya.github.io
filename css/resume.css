@@ -56,6 +56,7 @@ h2 {
 
 .list-icons .list-inline-item i:hover {
   color: #BD5D38;
+  -webkit-animation: rotate-reverse 0.5s 1 linear;
   animation: rotate-reverse 0.5s 1 linear;
 }
 
@@ -70,12 +71,19 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 17rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: auto auto 0;
     padding: 0.1rem;
@@ -86,13 +94,22 @@ h2 {
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
     width: 100%;
     margin-bottom: auto;
   }
   #sideNav .navbar-collapse .navbar-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 17rem;
   }
@@ -147,10 +164,12 @@ a:hover, a:focus, a:active {
 }
 
 .animation-delay-2s {
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
 
 .animation-delay-4s {
+  -webkit-animation-delay: 4s;
   animation-delay: 4s;
 }
 
@@ -188,11 +207,14 @@ a:hover, a:focus, a:active {
   width: 95%;
   min-height: 250px;
   margin-left: 0.5%;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .portfolio__item:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -228,6 +250,7 @@ a:hover, a:focus, a:active {
   -o-filter: blur(2px);
   -ms-filter: blur(2px);
   filter: blur(3px);
+  -webkit-transition: .5s filter linear;
   transition: .5s filter linear;
   -webkit-transition: .5s -webkit-filter linear;
   -moz-transition: .5s -moz-filter linear;
@@ -263,6 +286,7 @@ a:hover, a:focus, a:active {
   display: inline-block;
   bottom: 25px;
   cursor: pointer;
+  -webkit-transition: color .5s;
   transition: color .5s;
 }
 
@@ -299,6 +323,7 @@ a:hover, a:focus, a:active {
   position: absolute;
   bottom: 64px;
   visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -317,30 +342,48 @@ a:hover, a:focus, a:active {
 }
 
 .delay-02s {
+  -webkit-animation-delay: .2s;
   animation-delay: .2s;
 }
 
 .delay-04s {
+  -webkit-animation-delay: .4s;
   animation-delay: .4s;
 }
 
 .delay-05s {
+  -webkit-animation-delay: .5s;
   animation-delay: .5s;
+}
+
+@-webkit-keyframes rotate-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes rotate-reverse {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
 }
 
 .icon--rotate-reverse {
+  -webkit-animation: rotate-reverse 2s infinite linear;
   animation: rotate-reverse 2s infinite linear;
 }
 
 .list-inline-item:hover {
+  -webkit-animation: rotate-reverse 0.5s 1 linear;
   animation: rotate-reverse 0.5s 1 linear;
 }
